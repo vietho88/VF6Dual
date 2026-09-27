@@ -1,0 +1,18 @@
+VF6 Dual v0.1
+==============
+Source generated as an experimental prototype.
+Not compiled in this environment (Android SDK/Maven dependencies are not locally available).
+Use .github/workflows/build-apk.yml to compile with GitHub Actions.
+
+Primary test targets:
+- Samsung Galaxy S24 Ultra
+- Android 16 / One UI 8 class firmware
+- VinFast VF6 Android Auto
+- Shizuku ADB-shell backend
+
+Core approach:
+- overlay virtual display (no MediaProjection)
+- two freeform tasks
+- WindowManager mirrorDisplay -> SurfaceControl
+- CAR_LAUNCHER parked Android Auto activity
+- tap/swipe forwarded with input -d

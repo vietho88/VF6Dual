@@ -1,0 +1,2 @@
+-keep class com.vf6.dual.bridge.PrivilegedService { *; }
+-keep class rikka.shizuku.** { *; }
