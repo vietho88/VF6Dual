@@ -1,4 +1,4 @@
-name: Build VF6 Dual APK
+name: Build VF6 Dual v0.2 APKs
 
 on:
   push:
@@ -31,23 +31,31 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Build debug APK
+      - name: Build debug APKs
         run: |
           set -o pipefail
-          gradle :app:assembleDebug --stacktrace --no-daemon 2>&1 | tee build.log
+          gradle :app:assembleDebug :driving:assembleDebug --stacktrace --no-daemon 2>&1 | tee build.log
 
-      - name: Upload APK
+      - name: Upload main APK
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: VF6Dual-v0.1-debug-apk
+          name: VF6Dual-main-v0.2-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+      - name: Upload driving APK
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: VF6Dual-driving-v0.2-debug-apk
+          path: driving/build/outputs/apk/debug/driving-debug.apk
           if-no-files-found: error
 
       - name: Upload build log
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: VF6Dual-build-log
+          name: VF6Dual-v0.2-build-log
           path: build.log
           if-no-files-found: ignore

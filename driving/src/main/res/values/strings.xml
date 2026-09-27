@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">VF6 Dual Driving</string>
+    <string name="driving_note">Driving mode provides safe session controls only. Full dual-app rendering remains parking-only.</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VF6 Dual Driving"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Android Auto driving companion. It controls the VF6 Dual virtual session but does not render arbitrary app UIs while driving."
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/test_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Send START command" />
+
+    <Button
+        android:id="@+id/test_swap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send SWAP command" />
+
+    <Button
+        android:id="@+id/test_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send STOP command" />
+</LinearLayout>
